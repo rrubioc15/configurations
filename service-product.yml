@@ -8,7 +8,7 @@ server:
 spring:
   cloud:
       config:
-        enabled: false
+        enabled: true
   h2:
     console:
       enabled: true
