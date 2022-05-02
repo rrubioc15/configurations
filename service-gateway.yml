@@ -22,8 +22,8 @@ spring:
             - Path=/login/**
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
-        globalcors:
-          corsConfigurations:
+        globales:
+          coresConfigurations:
             '[/**]':
               allowedOrigins: "http://localhost:4200/"
               allowedMethods: "*"
