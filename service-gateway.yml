@@ -7,6 +7,14 @@ spring:
       discovery:
         locator:
           enabled: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        globalcors:
+          corsConfigurations:
+            '[/**]':
+              allowedOrigins: "http://localhost:4200/"
+              allowedMethods: "*"
+              allowedHeaders: "*"
       routes:
         - id: service-client
           uri: lb://service-client
@@ -20,6 +28,7 @@ spring:
           uri: lb://service-authentication
           predicates:
             - Path=/login/**
+
 
 eureka:
   client:
